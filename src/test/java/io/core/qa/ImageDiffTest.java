@@ -11,7 +11,7 @@ public class ImageDiffTest {
     @Test(dataProvider = "imageFilesProvider")
     public void bulkVisualComparisonTest(String fileName) {
         String baseDir = "./src/test/resources";
-        String diffDir = "target/visual-diffs/";
+        String diffDir = "./src/test/resources/visual-diffs/";
         String actual = baseDir + "/actual/actual_" + fileName;
         String expected = baseDir + "/expected/expected_" + fileName;
         String diff = diffDir + "DIFF_" + fileName;
@@ -26,7 +26,8 @@ public class ImageDiffTest {
         return new Object[][]{
                 {"sign_in.png"},
                 {"fb.png"},
-                {"my_sign_in.png"}
+                {"my_sign_in.png"},
+                {"github.png"}
         };
     }
 }
